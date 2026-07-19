@@ -6,7 +6,7 @@
 <title>Narbeh Davoodian</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0F1117;--ink:#EEEEF0;--muted:#6B7280;--accent:#6EE7B7;--border:#1F2937;--surface:#161B27}
+:root{--bg:#0F1117;--ink:#EEEEF0;--muted:#6B7280;--accent:#A78BFA;--border:#1F2937;--surface:#161B27}
 body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:900px;margin:0 auto;padding:0 2rem}
 nav{padding:2rem 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border)}
@@ -38,18 +38,18 @@ nav{padding:2rem 0;display:flex;justify-content:space-between;align-items:center
 .item-icon{font-size:1.25rem;margin-bottom:.875rem}
 .item-title{font-size:.95rem;font-weight:600;margin-bottom:.4rem}
 .item-desc{font-size:.82rem;color:var(--muted);line-height:1.65}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-.about-text p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:1rem}
-.meta-row{display:flex;gap:1rem;padding:.875rem 0;border-bottom:1px solid var(--border)}
-.meta-row:first-child{border-top:1px solid var(--border)}
-.meta-key{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:80px}
-.meta-val{font-size:.88rem}
+.now-list{display:flex;flex-direction:column;gap:0}
+.now-row{display:flex;gap:1.5rem;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--border)}
+.now-row:first-child{border-top:1px solid var(--border)}
+.now-key{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:100px}
+.now-val{font-size:.9rem}
+.now-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:.5rem;vertical-align:middle}
 footer{border-top:1px solid var(--border);padding:2.5rem 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .copy{font-size:.78rem;color:var(--muted)}
 .foot-links{display:flex;gap:1.5rem}
 .foot-links a{font-size:.78rem;color:var(--muted);text-decoration:none;transition:color .15s}
 .foot-links a:hover{color:var(--ink)}
-@media(max-width:680px){.hero{grid-template-columns:1fr}.hero-right{display:none}.about-grid{grid-template-columns:1fr}.nav-links{display:none}footer{flex-direction:column}}
+@media(max-width:680px){.hero{grid-template-columns:1fr}.hero-right{display:none}.nav-links{display:none}footer{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -59,7 +59,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;display:flex;justify-
     <a class="logo" href="#">ND</a>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#now">Now</a></li>
       <li><a href="mailto:narbeh.davoodian@deliveryhero.com">Contact</a></li>
     </ul>
   </nav>
@@ -67,7 +67,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;display:flex;justify-
     <div class="hero-left">
       <p class="eyebrow">Platform Engineering - Berlin</p>
       <h1>Infrastructure that lets teams move fast.</h1>
-      <p class="hero-desc">I'm Narbeh Davoodian - a platform engineer at Delivery Hero. I build the systems and tooling that help hundreds of engineers ship with confidence.</p>
+      <p class="hero-desc">I'm Narbeh Davoodian - a platform engineer at Delivery Hero. I design the systems and developer tooling that help hundreds of engineers ship with confidence every day.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="mailto:narbeh.davoodian@deliveryhero.com">Get in touch</a>
         <a class="btn btn-ghost" href="https://github.com/narbeh" target="_blank" rel="noopener">GitHub</a>
@@ -90,19 +90,13 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;display:flex;justify-
     </div>
   </section>
   <hr class="rule">
-  <section class="section" id="about">
-    <div class="section-head"><h2 class="section-title">About</h2><span class="section-tag">Background</span></div>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>I work at the intersection of platform engineering and developer experience - designing systems that let product teams move faster without trading off reliability.</p>
-        <p>My work spans infrastructure design, internal tooling, and the day-to-day operational health of distributed systems at scale.</p>
-      </div>
-      <div class="about-meta">
-        <div class="meta-row"><span class="meta-key">Company</span><span class="meta-val">Delivery Hero SE</span></div>
-        <div class="meta-row"><span class="meta-key">Location</span><span class="meta-val">Berlin, Germany</span></div>
-        <div class="meta-row"><span class="meta-key">Focus</span><span class="meta-val">Platform Engineering</span></div>
-        <div class="meta-row"><span class="meta-key">GitHub</span><span class="meta-val">github.com/narbeh</span></div>
-      </div>
+  <section class="section" id="now">
+    <div class="section-head"><h2 class="section-title">Currently</h2><span class="section-tag">Right now</span></div>
+    <div class="now-list">
+      <div class="now-row"><span class="now-key">Company</span><span class="now-val">Delivery Hero SE</span></div>
+      <div class="now-row"><span class="now-key">Location</span><span class="now-val">Berlin, Germany</span></div>
+      <div class="now-row"><span class="now-key">Focus</span><span class="now-val">Platform Engineering &amp; Infrastructure</span></div>
+      <div class="now-row"><span class="now-key">Building</span><span class="now-val"><span class="now-dot"></span>Self-hosted deployment platforms</span></div>
     </div>
   </section>
   <footer>
