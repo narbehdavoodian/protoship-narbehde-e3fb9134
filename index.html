@@ -44,6 +44,9 @@ nav{padding:2rem 0;display:flex;justify-content:space-between;align-items:center
 .now-key{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:100px}
 .now-val{font-size:.9rem}
 .now-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:.5rem;vertical-align:middle}
+.env-bar{background:var(--surface);border:1px solid var(--border);border-radius:.5rem;padding:.6rem 1rem;display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;margin-top:2rem}
+.env-bar .env-key{color:var(--muted);font-weight:600}
+.env-bar .env-val{color:var(--accent);font-weight:700;font-family:ui-monospace,monospace}
 footer{border-top:1px solid var(--border);padding:2.5rem 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .copy{font-size:.78rem;color:var(--muted)}
 .foot-links{display:flex;gap:1.5rem}
@@ -97,6 +100,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 0;display:flex;justify-
       <div class="now-row"><span class="now-key">Location</span><span class="now-val">Berlin, Germany</span></div>
       <div class="now-row"><span class="now-key">Focus</span><span class="now-val">Platform Engineering &amp; Infrastructure</span></div>
       <div class="now-row"><span class="now-key">Building</span><span class="now-val"><span class="now-dot"></span>Self-hosted deployment platforms</span></div>
+    </div>
+    <div class="env-bar">
+      <span class="env-key">test:</span>
+      <span class="env-val">${TEST}</span>
     </div>
   </section>
   <footer>
